@@ -23,4 +23,14 @@ apply plugin: 'org.openapi.diff'
 openApiDiff {
     oldSpec = "$rootDir/../maven/src/test/resources/oldspec.yaml".toString()
     newSpec = "$rootDir/../maven/src/test/resources/newspec.yaml".toString()
+    failOnIncompatible = true
+//    consoleOutputFileName = "${project.basedir}/../maven/target/diff.txt"
+//    jsonOutputFileName = "${project.basedir}/../maven/target/diff.json"
+//    markdownOutputFileName = "${project.basedir}/../maven/target/diff.md"
+//    <configFiles>
+//    <configFile>${project.basedir}/../maven/src/test/resources/test-config-file.yaml</configFile>
+//    </configFiles>
+//    <configProps>
+//        <incompatible.request.params.required.increased>false</incompatible.request.params.required.increased>
+//    </configProps>
 }

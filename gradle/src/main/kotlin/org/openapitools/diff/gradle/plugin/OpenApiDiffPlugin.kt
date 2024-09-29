@@ -22,6 +22,13 @@ class OpenApiDiffPlugin: Plugin<Project> {
 
                     oldSpec.set(validate.oldSpec)
                     newSpec.set(validate.newSpec)
+                    failOnIncompatible.set(validate.failOnIncompatible)
+                    failOnChanged.set(validate.failOnChanged)
+                    skip.set(validate.skip)
+                    //                    consoleOutputFileName.set(validate.consoleOutputFileName)
+                    //                    jsonOutputFileName.set(validate.jsonOutputFileName)
+                    //                    markdownOutputFileName.set(validate.markdownOutputFileName)
+                    //                    asciidocOutputFileName.set(validate.asciidocOutputFileName)
                 }
             }
         }
