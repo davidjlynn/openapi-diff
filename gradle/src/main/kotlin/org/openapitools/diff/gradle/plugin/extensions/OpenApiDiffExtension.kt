@@ -3,7 +3,7 @@ package org.openapitools.diff.gradle.plugin.extensions
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.property
 
-open class OpenApiDiffValidateExtension(project: Project) {
+open class OpenApiDiffExtension(project: Project) {
 
     val oldSpec = project.objects.property<String>()
 

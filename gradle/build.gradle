@@ -26,8 +26,8 @@ specifications as part of your build. Other tasks are available as command line 
 java {
     withSourcesJar()
     withJavadocJar()
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
@@ -63,7 +63,7 @@ tasks.named("test", Test).configure {
 
 tasks.withType(KotlinCompile).configureEach {
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
 }
 
@@ -83,14 +83,14 @@ tasks.withType(ReleaseNexusStagingRepository).configureEach {
 
 gradlePlugin {
     website = "https://openapi-generator.tech/"
-    vcsUrl = "https://github.com/OpenAPITools/openapi-generator"
+    vcsUrl = "https://github.com/OpenAPITools/openapi-diff"
     plugins {
-        openApiGenerator {
-            id = "org.openapi.generator"
-            description = "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)."
-            displayName = "OpenAPI Generator Gradle Plugin"
-            implementationClass = "org.openapitools.generator.gradle.plugin.OpenApiGeneratorPlugin"
-            tags.addAll("openapi-3.0", "openapi-2.0", "openapi", "swagger", "codegen", "sdk")
+        openApiDiff {
+            id = "org.openapi.diff"
+            description = "OpenAPI Diff allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)."
+            displayName = "OpenAPI Diff Gradle Plugin"
+            implementationClass = "org.openapitools.diff.gradle.plugin.OpenApiDiffPlugin"
+            tags.addAll("openapi-3.0", "openapi-2.0", "openapi", "swagger", "diff")
         }
     }
 }

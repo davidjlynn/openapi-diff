@@ -2,15 +2,15 @@ package org.openapitools.diff.gradle.plugin
 
 import org.gradle.api.Project
 import org.gradle.api.Plugin
-import org.openapitools.diff.gradle.plugin.extensions.OpenApiDiffValidateExtension
+import org.openapitools.diff.gradle.plugin.extensions.OpenApiDiffExtension
 import org.openapitools.diff.gradle.plugin.tasks.ValidateTask
 
 class OpenApiDiffPlugin: Plugin<Project> {
     override fun apply(project: Project) {
         project.run {
             val validate = extensions.create(
-                "openApiDiffValidate",
-                OpenApiDiffValidateExtension::class.java,
+                "openApiDiff",
+                OpenApiDiffExtension::class.java,
                 project
 
             )
